@@ -1,6 +1,6 @@
 /**
  * @file
- * @author The CS2 TA Team <<cs2-tas@ugcs.caltech.edu>>
+ * @author The CS2 TA Team
  * @version 1.0
  * @date 2013-2014
  * @copyright This code is in the public domain.

@@ -1,6 +1,6 @@
 /**
  * @file structs.h
- * @author The CS2 TA Team <<cs2tas@caltech.edu>>
+ * @author The CS2 TA Team
  * @version 1.0
  * @date 2013-2015
  * @copyright This code is in the public domain.
@@ -16,8 +16,8 @@
 
 /**
  * @brief Struct representing a lattice point in the (Euclidean) 2-D plane.
- * 
- * The Tuple struct is a representation of a lattice point in the (Euclidean) 
+ *
+ * The Tuple struct is a representation of a lattice point in the (Euclidean)
  * 2-D plane. The stuct provides functionalities such as printing and angle
  * computations.
  */
@@ -67,7 +67,7 @@ struct Tuple
      * @brief Computes the angle that the line joining this point to the
      *        passed point makes with respect to the horizontal line
      *        going through the passed point.
-     * 
+     *
      * @param pt: Pointer to point through which we draw a horizontal line and
      *            compute angle relative to.
 

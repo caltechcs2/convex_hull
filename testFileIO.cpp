@@ -1,6 +1,6 @@
 /**
  * @file testFileIO.cpp
- * @author The CS2 TA Team <<cs2tas@caltech.edu>>
+ * @author The CS2 TA Team
  * @version 1.0
  * @date 2013-2015
  * @copyright This code is in the public domain.
