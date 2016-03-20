@@ -74,7 +74,7 @@ int main(int argc, char* argv[])
  */
 void usage()
 {
-    fprintf(stderr, "%s", usage_string);
+    std::cerr << usage_string << std::endl;
     exit(1);
 }
 

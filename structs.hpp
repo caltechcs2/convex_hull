@@ -12,7 +12,10 @@
 #ifndef __STRUCTS_H__
 #define __STRUCTS_H__
 #include <cmath>
-#include <cstdio>
+#include <iostream>
+
+using namespace std;
+
 
 /**
  * @brief Struct representing a lattice point in the (Euclidean) 2-D plane.
@@ -50,7 +53,7 @@ struct Tuple
      */
     void printTuple()
     {
-        printf("(%d, %d)\n", x, y);
+        cout << "(" << x << ", " << y << ")" << endl;
     }
 
     /**

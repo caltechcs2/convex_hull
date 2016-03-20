@@ -9,16 +9,19 @@
  *
  */
 
-#include <cstdio>
+#include <iostream>
+
+using namespace std;
+
 
 int main(int argc, char const *argv[])
 {
-    printf("argc: %d\n", argc);
-    printf("argv: ");
+    cout << "argc: " << argc << endl;
+    cout << "argv: ";
     for (int i = 0; i < argc; ++i)
     {
-        printf("%s ", argv[i]);
+        cout << argv[i] << " ";
     }
-    printf("\n");
+    cout << endl;
     return 0;
 }

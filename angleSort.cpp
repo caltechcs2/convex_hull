@@ -11,7 +11,6 @@
 #include "structs.hpp"
 #include <vector>
 
-using namespace std;
 
 // TODO Modify one of your sorting functions (bubble sort not permitted) and
 // implement it here. Add extra arguments as needed.
@@ -35,7 +34,7 @@ int main(int argc, char const *argv[])
     }
     for (vector<double>::iterator i = angles.begin(); i != angles.end(); ++i)
     {
-        printf("%g\n", *i);
+        cout << *i << endl;
     }
 
     // Now sort them with respect to angle (points[i] corresponds to angle[i])
@@ -51,7 +50,7 @@ int main(int argc, char const *argv[])
     }
     for (vector<double>::iterator i = angles.begin(); i != angles.end(); ++i)
     {
-        printf("%g\n", *i);
+        cout << *i << endl;
     }
 
     // Don't want to leak memory...
