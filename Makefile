@@ -1,7 +1,7 @@
 CC = g++
 LD = g++
-CPPFLAGS = -std=c++0x -g -Wall -pedantic
-LDFLAGS = 
+CPPFLAGS = -std=c++11 -g -Wall -pedantic
+LDFLAGS =
 
 all: sorter fileio list convexhull line
 

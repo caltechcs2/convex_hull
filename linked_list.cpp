@@ -53,7 +53,7 @@ private:
  */
 List::List()
 {
-    head = NULL;
+    head = nullptr;
     num_elements = 0;
 }
 
@@ -84,7 +84,7 @@ void List::insert(int item)
         // temp now points to node at end of list
 
         // Construct our new node, it doesn't point to anything yet
-        Node *new_node = new Node(item, NULL);
+        Node *new_node = new Node(item, nullptr);
 
         // Make the old tail point to the new tail
         temp->next = new_node;
@@ -94,7 +94,7 @@ void List::insert(int item)
     }
     else
     {
-        head = new Node(item, NULL);
+        head = new Node(item, nullptr);
         num_elements++;
     }
     return;
@@ -106,7 +106,7 @@ void List::insert(int item)
 void List::printList()
 {
     Node *temp = head;
-    while (temp != NULL)
+    while (temp != nullptr)
     {
         std::cout << temp->data << std::endl;
         temp = temp->next;

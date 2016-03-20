@@ -56,7 +56,7 @@ vector<Tuple> line(Tuple p1, Tuple p2);
 LineApp::LineApp()
 {
     /* Do SDL initialization. */
-    surf = NULL;
+    surf = nullptr;
     running = true;
 }
 
@@ -139,7 +139,7 @@ bool LineApp::OnInit()
     }
 
     if((surf = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, 32,
-    SDL_HWSURFACE | SDL_DOUBLEBUF)) == NULL)
+    SDL_HWSURFACE | SDL_DOUBLEBUF)) == nullptr)
     {
         return false;
     }
@@ -227,7 +227,7 @@ void LineApp::draw_line_points()
  */
 void LineApp::OnRender()
 {
-    SDL_FillRect(surf, NULL, SDL_MapRGB(surf->format, 255, 255, 255));
+    SDL_FillRect(surf, nullptr, SDL_MapRGB(surf->format, 255, 255, 255));
 
     draw_points();
     draw_line_points();

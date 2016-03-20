@@ -56,7 +56,7 @@ void DoGrahamScan(vector<Tuple*> points, ConvexHullApp *app);
  */
 void ConvexHullApp::generate_points()
 {
-    srand(time(NULL));
+    srand(time(nullptr));
 
     for (int i = 0; i < NPOINTS; i++)
     {
@@ -72,7 +72,7 @@ void ConvexHullApp::generate_points()
 ConvexHullApp::ConvexHullApp()
 {
     /* Do SDL initialization. */
-    surf = NULL;
+    surf = nullptr;
     running = true;
 
     /* Generate a list of points. */
@@ -132,7 +132,7 @@ bool ConvexHullApp::OnInit()
     }
 
     if((surf = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, 32,
-    SDL_HWSURFACE | SDL_DOUBLEBUF)) == NULL)
+    SDL_HWSURFACE | SDL_DOUBLEBUF)) == nullptr)
     {
         return false;
     }
@@ -229,7 +229,7 @@ void ConvexHullApp::draw_hull()
  */
 void ConvexHullApp::OnRender()
 {
-    SDL_FillRect(surf, NULL, SDL_MapRGB(surf->format, 255, 255, 255));
+    SDL_FillRect(surf, nullptr, SDL_MapRGB(surf->format, 255, 255, 255));
     draw_points();
     draw_hull();
     SDL_Flip(surf);
