@@ -8,7 +8,7 @@
  * @brief A brief example of file input.
  */
 
-#include "fileio.h"
+#include "fileio.hpp"
 
 /**
  * @brief Read the file input and print out its contents

@@ -8,7 +8,7 @@
  * @brief Student implementation of line algorithm.
  *
  */
-#include "LineAlgorithm.h"
+#include "LineAlgorithm.hpp"
 
 /**
  * TODO: Implement a line algorithm of your choice here.

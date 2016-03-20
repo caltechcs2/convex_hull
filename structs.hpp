@@ -1,5 +1,5 @@
 /**
- * @file structs.h
+ * @file structs.hpp
  * @author The CS2 TA Team
  * @version 1.0
  * @date 2013-2015

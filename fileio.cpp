@@ -8,7 +8,7 @@
  * @brief A brief example of file input (implementation).
  */
 
-#include "fileio.h"
+#include "fileio.hpp"
 
 /**
  * @brief Reads the integers in file and fills nums with these integers.

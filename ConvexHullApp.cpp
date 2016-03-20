@@ -6,15 +6,15 @@
  * @copyright see License section
  *
  * @brief Functions for the main application class.
- * 
+ *
  * @section License
  * Copyright (c) 2013-2014 California Institute of Technology.
  * All rights reserved.
- * 
+ *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
  * met:
- * 
+ *
  * * Redistributions of source code must retain the above copyright
  *   notice, this list of conditions and the following disclaimer.
  * * Redistributions in binary form must reproduce the above
@@ -24,7 +24,7 @@
  * * Neither the name of the  nor the names of its
  *   contributors may be used to endorse or promote products derived from
  *   this software without specific prior written permission.
- * 
+ *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
  * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
  * LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
@@ -38,15 +38,15 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  * The views and conclusions contained in the software and documentation are those
- * of the authors and should not be interpreted as representing official policies, 
+ * of the authors and should not be interpreted as representing official policies,
  * either expressed or implied, of the California Institute of Technology.
- * 
+ *
  */
 
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-#include "ConvexHullApp.h"
+#include "ConvexHullApp.hpp"
 
 void DoGiftWrap(vector<Tuple*> points, ConvexHullApp *app);
 void DoGrahamScan(vector<Tuple*> points, ConvexHullApp *app);
@@ -57,7 +57,7 @@ void DoGrahamScan(vector<Tuple*> points, ConvexHullApp *app);
 void ConvexHullApp::generate_points()
 {
     srand(time(NULL));
-    
+
     for (int i = 0; i < NPOINTS; i++)
     {
         points.push_back(new Tuple(rand() % SCREEN_WIDTH,
@@ -96,15 +96,15 @@ ConvexHullApp::~ConvexHullApp()
  */
 int ConvexHullApp::OnExecute()
 {
-    SDL_Event Event;    
-    
+    SDL_Event Event;
+
     if(OnInit() == false)
     {
         return -1;
     }
 
     OnRender();
-    
+
     while (running)
     {
         while(SDL_PollEvent(&Event))
@@ -112,9 +112,9 @@ int ConvexHullApp::OnExecute()
             OnEvent(&Event);
         }
     }
- 
+
     OnCleanup();
- 
+
     return 0;
 }
 
@@ -130,23 +130,23 @@ bool ConvexHullApp::OnInit()
     {
         return false;
     }
- 
-    if((surf = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, 32, 
+
+    if((surf = SDL_SetVideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, 32,
     SDL_HWSURFACE | SDL_DOUBLEBUF)) == NULL)
     {
         return false;
     }
-    
+
     /* This is necessary to receive Unicode keycodes. */
     SDL_EnableUNICODE(1);
- 
+
     return true;
 }
 
 
 /**
  * @brief Called on keypresses, clicks, etc.
- * 
+ *
  * @param[in] event Describes the event that occurred.
  */
 void ConvexHullApp::OnEvent(SDL_Event* event)
@@ -213,7 +213,7 @@ void ConvexHullApp::draw_hull()
 {
     if (hull.size() < 2)
         return;
-    
+
     for (unsigned int i = 0; i < hull.size() - 1; i++)
     {
         // Draw lines between consecutive hull points.
@@ -229,7 +229,7 @@ void ConvexHullApp::draw_hull()
  */
 void ConvexHullApp::OnRender()
 {
-    SDL_FillRect(surf, NULL, SDL_MapRGB(surf->format, 255, 255, 255));    
+    SDL_FillRect(surf, NULL, SDL_MapRGB(surf->format, 255, 255, 255));
     draw_points();
     draw_hull();
     SDL_Flip(surf);
@@ -250,6 +250,6 @@ void ConvexHullApp::OnCleanup()
  */
 int main(int argc, char* argv[])
 {
-    ConvexHullApp app;    
+    ConvexHullApp app;
     return app.OnExecute();
 }

@@ -9,12 +9,12 @@
  * (implementation).
  *
  */
-#include "HullAlgorithms.h"
+#include "HullAlgorithms.hpp"
 
 /**
  * TO STUDENTS: In all of the following functions, feel free to change the
  * function arguments and/or write helper functions as you see fit. Remember to
- * add the function header to HullAlgorithms.h if you write a helper function!
+ * add the function header to HullAlgorithms.hpp if you write a helper function!
  *
  * Our reference implementation has four helper functions and the function(s)
  * copied over from angleSort.cpp.

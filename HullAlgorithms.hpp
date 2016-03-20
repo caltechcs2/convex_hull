@@ -14,8 +14,8 @@
 #include <cstdlib>
 #include <stdlib.h>
 #include <iostream>
-#include "ConvexHullApp.h"
-#include "structs.h"
+#include "ConvexHullApp.hpp"
+#include "structs.hpp"
 
 using namespace std;
 

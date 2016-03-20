@@ -9,7 +9,7 @@
  * algorithms (implementation).
  *
  */
-#include "sorter.h"
+#include "sorter.hpp"
 
 int main(int argc, char* argv[])
 {
@@ -81,7 +81,7 @@ void usage()
 /**
  * TO STUDENTS: In all of the following functions, feel free to change the
  * function arguments and/or write helper functions as you see fit. Remember to
- * add the function header to sorter.h if you write a helper function!
+ * add the function header to sorter.hpp if you write a helper function!
  */
 
 /**

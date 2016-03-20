@@ -16,8 +16,8 @@
 #include <cstdlib>
 #include <stdlib.h>
 #include <iostream>
-#include "LineApp.h"
-#include "structs.h"
+#include "LineApp.hpp"
+#include "structs.hpp"
 
 using namespace std;
 

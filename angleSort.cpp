@@ -8,7 +8,7 @@
  * @brief An example of sorting (x, y) pairs by angle.
  *
  */
-#include "structs.h"
+#include "structs.hpp"
 #include <vector>
 
 using namespace std;
