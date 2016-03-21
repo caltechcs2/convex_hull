@@ -188,9 +188,9 @@ $ sudo pacman -S sdl_gfx
 
 <p> Valgrind is a program used for memory debugging and memory leak detection that runs your program and keeps track of its memory usage. Your program runs normally within Valgrind, and when it returns, Valgrind prints out a useful report of the heap memory usage of your program. </p>
 
-<p> Take a look at the file <span class="code">linked_list.cpp</span>. This file implements the shell of a linked list data structure. Compile it with the command <span class="code">make list</span>. Now run the program in Valgrind with the command <span class="code">valgrind ./linked_list</span>. Notice the memory leaks. </p>
+<p> Take a look at the file <span class="code">linked_list.cpp</span>. This file implements the shell of a linked list data structure. Compile it with the command <span class="code">make list</span>. Now run the program in Valgrind with the command <span class="code">valgrind ./linked_list</span> and inspect the output. If Valgrind reports that a nonzero number of bytes are "definitely lost," "indirectly lost," or "possibly lost," then you are almost certainly leaking memory. (On the other hand, it is fine to have more "allocs" than "frees," and to have a nonzero number of bytes that are "still reachable.")</p>
 
-<p><div class="points easy">1</div>Why is the program leaking memory? How could this be a problem? Answer these questions in a comment block at the top of <span class="code">linked_list.cpp</span>. </p>
+<p><div class="points easy">1</div>Why is this program leaking memory? How could this be a problem? Answer these questions in a comment block at the top of <span class="code">linked_list.cpp</span>. </p>
 
 <p><div class="points easy">1</div>Fix the problem and verify that your fix works. Include the corrected version of <span class="code">linked_list.cpp</span> in your submission.</p>
 
