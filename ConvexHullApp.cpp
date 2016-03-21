@@ -85,7 +85,9 @@ ConvexHullApp::ConvexHullApp()
  */
 ConvexHullApp::~ConvexHullApp()
 {
-
+    for (Tuple * t : points) {
+        delete t;
+    }
 }
 
 

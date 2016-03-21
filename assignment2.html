@@ -433,6 +433,12 @@ app->add_to_hull(new Tuple(1, 1));
 <p> We've provided you with a GUI application similar to the convex hull app that handles the visualization component of the line algorithm. Click on the screen to place points on it, and press <span class="code">l</span> to invoke your line algorithm on the last two points you entered. You can also press <span class="code">c</span> to clear the screen of all points and lines. </p>
 
 <p> <div class="points hard">5</div> Implement Bresenham's line algorithm or a line algorithm of your choice. The only function you have to write is the <span class="code">line</span> algorithm in <span class="code">LineAlgorithm.cpp</span>. Partial credit will be given if at least some cases work. </p>
+
+<hr />
+
+<h3>Note on SDL memory leaks</h3>
+
+<p>This assignment and many future assignments will use graphics libraries such as SDL. Valgrind will report that some of these libraries leak memory. You can use <span class="code">valgrind --leak-check=full ./ConvexHullApp</span> to try to determine whether a memory leak is from your code or a library's code.</p>
 </div>
 
 </body>
