@@ -307,6 +307,8 @@ $ ./testFileIO nums
 
 <p> An idea for implementing the quicksort algorithm in place is to keep track of the segment of the list we are sorting with its leftmost and rightmost indices. We may select a pivot in the list and partition the list around this pivot using a helper function. This helper function should put all elements smaller than the pivot element on its left and all elements larger than the pivot on its right. It may be useful to return the index that the pivot point ends up at from your helper function. </p>
 
+Try not to use operations that increase the time complexity of any of your sorting functions. For example, the <span class="code">std::vector::insert()</span> function <a href="http://en.cppreference.com/w/cpp/container/vector/insert">takes time that is linear in the size of the vector</a>, so you probably want to avoid it.
+
 <p> <div class="points easy">2</div> Outline and implement the in-place quicksort algorithm.</p>
 
 <p> Once you've finished implementing any subset of the above algorithms (or even before), you can compile your program and test it. Specify the type of sort you want to use with a command line option as documented in the usage statement that sorter prints out if you try to run it alone. </p>
