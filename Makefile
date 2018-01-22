@@ -3,7 +3,7 @@ LD = g++
 CPPFLAGS = -std=c++11 -g -Wall -pedantic
 LDFLAGS =
 
-all: sorter fileio list convexhull line
+all: sorter fileio list anglesort convexhull line
 
 list:
 	$(CC) $(CPPFLAGS) linked_list.cpp -o linked_list
@@ -13,6 +13,9 @@ sorter: sorter.cpp fileio.cpp sorter.hpp fileio.hpp
 
 fileio: testFileIO.cpp fileio.cpp fileio.hpp
 	$(CC) $(CPPFLAGS) testFileIO.cpp fileio.cpp -o testFileIO
+
+anglesort:
+	$(CC) $(CPPFLAGS) angleSort.cpp -o angleSort
 
 convexhull: ConvexHullApp.cpp ConvexHullApp.hpp HullAlgorithms.cpp structs.hpp HullAlgorithms.hpp
 	$(CC) $(CPPFLAGS) `sdl-config --cflags` ConvexHullApp.cpp HullAlgorithms.cpp `sdl-config --libs` -lSDL_gfx -o ConvexHullApp
